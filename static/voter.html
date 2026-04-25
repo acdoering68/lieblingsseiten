@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <head>
+
+    <title>Abstimmung über Tolle Webseiten oder Apps</title>
+    </head>
+    <body>
+     <script> 
+     function sendliebling() {
+      l = document.getElementById("Answer")
+      fetch("/meinelieblingsseite",{method: 'PUT',body:JSON.stringify('seite:'+l.value()})
+       // submit("/meinelieblingsseite","PUT")
+     }
+     
+     rt = document.getElementById("auswahlliste")
+     </script>
+     
+    <input id="Answer" type="text"  name="Antworten"/>
+    <input id="anserbutton" type="button" onclick="sendliebling()"
+       
+       <p> 
+       
+       <table id="auswahlliste">
+       </table>
+       
+     </body>
+  </html>
